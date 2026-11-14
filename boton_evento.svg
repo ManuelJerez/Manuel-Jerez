@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="44" viewBox="0 0 180 44">
+  <defs>
+    <clipPath id="c"><rect x="1" y="1" width="178" height="42" rx="21"/></clipPath>
+    <linearGradient id="f" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="e" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.55"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.25"/>
+    </linearGradient>
+    <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#fff" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="planet" cx="0.35" cy="0.35" r="0.75">
+      <stop offset="0" stop-color="#FFE48A"/>
+      <stop offset="0.6" stop-color="#F5B800"/>
+      <stop offset="1" stop-color="#c98a00"/>
+    </radialGradient>
+    <clipPath id="front"><rect x="-20" y="0" width="40" height="20"/></clipPath>
+  </defs>
+  <rect x="1" y="1" width="178" height="42" rx="21" fill="#0b1638" fill-opacity="0.55"/>
+  <rect x="1" y="1" width="178" height="42" rx="21" fill="url(#f)"/>
+  <g clip-path="url(#c)">
+    <rect x="-80" y="-5" width="40" height="54" fill="url(#sweep)" transform="skewX(-20)">
+      <animate attributeName="x" values="-80;240" dur="3s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <rect x="1.5" y="1.5" width="177" height="41" rx="20.5" fill="none" stroke="url(#e)"/>
+  <text x="80" y="27" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="500" fill="#ffffff" fill-opacity="0.92">Ver el evento</text>
+
+  <!-- planeta con anillo -->
+  <g transform="translate(145 22)">
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 0; 0 -1.5; 0 0" dur="2.4s" repeatCount="indefinite"/>
+      <ellipse rx="15" ry="4.2" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="1.4" transform="rotate(-20)"/>
+      <circle r="8.5" fill="url(#planet)"/>
+      <path d="M-6 -2 Q0 -4 6 -1" stroke="#c98a00" stroke-opacity="0.5" stroke-width="1" fill="none"/>
+      <path d="M-7 2.5 Q0 1 7 3" stroke="#c98a00" stroke-opacity="0.4" stroke-width="1" fill="none"/>
+      <g transform="rotate(-20)" clip-path="url(#front)">
+        <ellipse rx="15" ry="4.2" fill="none" stroke="#ffffff" stroke-opacity="0.85" stroke-width="1.4"/>
+      </g>
+      <g>
+        <circle cx="0" cy="-13" r="1.6" fill="#ffffff"/>
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="4s" repeatCount="indefinite"/>
+      </g>
+    </g>
+  </g>
+</svg>
